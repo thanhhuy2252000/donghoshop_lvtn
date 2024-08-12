@@ -1,0 +1,76 @@
+*Hướng Dẫn Cài Đặt và Sử Dụng Ứng Dụng Web Bán Đồng Hồ Với XAMPP
+
+*Yêu Cầu Hệ Thống
+- XAMPP (bao gồm Apache, PHP, và MySQL)
+- Composer
+- Git
+-----------------------
+*Cài Đặt
+---------------
+Bước 1: Cài Đặt môi trường XAMPP
+Nếu bạn chưa cài đặt XAMPP, tải và cài đặt XAMPP từ trang chính thức XAMPP:
+ https://www.apachefriends.org/download.html
+(sau khi cài đặt xamp hãy đảm bảo bạn cài đặt, chạy Apache và MySQL.)
+Bước 1.1: Cài Đặt Git
+Tải và cài đặt Git từ trang chính thức Git: https://www.git-scm.com/downloads
+Bước 1.2: Cài Đặt Composer
+Tải và cài đặt Composer từ trang chính thức: https://getcomposer.org/download/
+
+Bước 2: download source: Clone Repository bằng git
+Mở git bash ngoài destop máy, hoặc Terminal hoặc Command Prompt trên Windows 
+và sao chép mã nguồn từ GitHub về thư mục htdocs trong thư mục cài đặt XAMPP của bạn.
+
+cd C:\xampp\htdocs
+git clone https://github.com/thanhhuy2252000/donghoshop_lvtn.git
+cd donghoshop_lvtn
+
+Bước 3: Cài Đặt Các Phụ Thuộc: Sử dụng Composer để cài đặt tất cả các phụ thuộc cần thiết cho ứng dụng.
+Mở Terminal hoặc Command Prompt trên Windows
+"composer install"
+-cài laravel bằng composer
+"composer global require laravel/installer"
+
+Bước 4: Tạo Cơ Sở Dữ Liệu
+Mở phpMyAdmin từ XAMPP (truy cập http://localhost/phpmyadmin), tạo cơ sở dữ liệu mới với tên donghoshop_db.
+load file "donghoshop_db.sql" và database	
+
+Bước 5: Cấu Hình Môi Trường của laravel
+Sao chép tệp cấu hình môi trường mẫu và chỉnh sửa các thông số cần thiết.
+ mở .env thay đổi cấu hình:  
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=donghoshop_db
+DB_USERNAME=root
+DB_PASSWORD=
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME="lethanhhuy22052000@gmail.com"
+MAIL_PASSWORD="xldl znwk dvmm occp"
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS="lethanhhuy22052000@gmail.com"
+MAIL_FROM_NAME="DongHoShop"
+
+------thực thi------------
+Bước 1: chạy lệnh "php artinsan serv"
+
+Bước 2: mở trình duyệt và vào địa chỉ   http://localhost:8000/
+ đây là trang chủ website cho khác hàng truy cập
+
+Bước 3: nhấn vào Adminpage góc phải trên cùng của website để vào trang admin quản lý hoặc
+vào đường dẫn  http://localhost:8000/admin/
+tài khoản: admin@example.com
+mật khẩu: Admin123456
+----------------------------
+THÔNG TIN TEST THẺ ATM khi thanh toán bằng "momo" hạn mức 30 triệu 
+(đơn hàng nên có giá 30 triệu trở xuống để thanh toán)
+
+số thẻ: 9704 0000 0000 0018
+tên: NGUYEN VAN A
+ngày hạn: 03/07
+mã OTP: OTP
+số điện thoại: 0919100100
+
