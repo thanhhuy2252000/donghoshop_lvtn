@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 12, 2024 lúc 12:59 PM
+-- Thời gian đã tạo: Th8 13, 2024 lúc 06:01 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.1.25
 
@@ -66,7 +66,10 @@ INSERT INTO `chitiet_donhangs` (`id`, `tong`, `soluong`, `giagoc`, `giaban`, `cr
 (121, 4500000, 1, 5000000, 4500000, '2024-08-11 21:44:31', '2024-08-11 21:44:31', 1, 122),
 (122, 3500000, 1, 4000000, 3500000, '2024-08-11 21:47:42', '2024-08-11 21:47:42', 11, 123),
 (123, 4500000, 1, 5000000, 4500000, '2024-08-11 23:00:37', '2024-08-11 23:00:37', 1, 124),
-(124, 5000000, 1, 5000000, 5000000, '2024-08-11 23:00:37', '2024-08-11 23:00:37', 6, 124);
+(124, 5000000, 1, 5000000, 5000000, '2024-08-11 23:00:37', '2024-08-11 23:00:37', 6, 124),
+(125, 6000000, 1, 6000000, 6000000, '2024-08-12 05:57:20', '2024-08-12 05:57:20', 28, 125),
+(126, 800000, 1, 800000, 800000, '2024-08-12 06:12:31', '2024-08-12 06:12:31', 12, 126),
+(127, 800000, 1, 800000, 800000, '2024-08-12 06:34:42', '2024-08-12 06:34:42', 12, 127);
 
 -- --------------------------------------------------------
 
@@ -137,7 +140,10 @@ INSERT INTO `donhangs` (`id`, `name`, `email`, `sdt`, `diachi`, `tongDH`, `pt_th
 (120, 'Phan Hùng', 'hungphan@gmail.com', '0939384675', '123 Hoàng Sơn, Đống Đa, Hà Nội', 11000000, 'momo', 'Đã hủy', '2024-08-11 04:37:21', '2024-08-11 21:24:23', 64),
 (122, 'Phan Hùng', 'hungphan@gmail.com', '0939384675', '123 Hoàng Sơn, Đống Đa, Hà Nội', 4950000, 'COD', 'Chưa xác nhận', '2024-08-11 21:44:31', '2024-08-11 21:44:31', 64),
 (123, 'Phan Hùng', 'hungphan@gmail.com', '0939384675', '123 Hoàng Sơn, Đống Đa, Hà Nội', 3850000, 'momo', 'Đã thanh toán', '2024-08-11 21:47:42', '2024-08-11 21:47:42', 64),
-(124, 'Hoàng Thị Hậu', 'hoanghau46@gmail.com', '0309300046', '1 Lý Thái Tổ, Phường 1, Quận 10, TP.HCM', 10450000, 'COD', 'Đã hủy', '2024-08-11 23:00:37', '2024-08-11 23:00:45', 96);
+(124, 'Hoàng Thị Hậu', 'hoanghau46@gmail.com', '0309300046', '1 Lý Thái Tổ, Phường 1, Quận 10, TP.HCM', 10450000, 'COD', 'Đã hủy', '2024-08-11 23:00:37', '2024-08-11 23:00:45', 96),
+(125, 'Hoàng Thị Hậu', 'hoanghau46@gmail.com', '0309300046', '1 Lý Thái Tổ, Phường 1, Quận 10, TP.HCM', 6600000, 'momo', 'Đã thanh toán', '2024-08-12 05:57:20', '2024-08-12 05:57:20', 96),
+(126, 'Hoàng Thị Hậu', 'hoanghau46@gmail.com', '0309300046', '1 Lý Thái Tổ, Phường 1, Quận 10, TP.HCM', 880000, 'momo', 'Đã hủy', '2024-08-12 06:12:31', '2024-08-12 06:36:56', 96),
+(127, 'Hoàng Thị Hậu', 'hoanghau46@gmail.com', '0309300046', '1 Lý Thái Tổ, Phường 1, Quận 10, TP.HCM', 880000, 'COD', 'Đã giao', '2024-08-12 06:34:42', '2024-08-12 06:37:16', 96);
 
 -- --------------------------------------------------------
 
@@ -367,7 +373,8 @@ INSERT INTO `ratings` (`id`, `user_id`, `rating`, `comment`, `trangthai`, `chiti
 (5, 96, 5, 'tôi thấy đẹp', 1, 106, '2024-08-10 11:09:44', '2024-08-10 11:17:50'),
 (6, 96, 5, 'siêu ưa chuộng', 0, 94, '2024-08-10 11:21:45', '2024-08-10 11:21:45'),
 (23, 64, 5, 'Rất đẹp !', 1, 121, '2024-08-11 21:44:55', '2024-08-11 21:45:51'),
-(24, 64, 5, NULL, 0, 109, '2024-08-12 02:41:45', '2024-08-12 02:41:45');
+(24, 64, 5, NULL, 0, 109, '2024-08-12 02:41:45', '2024-08-12 02:41:45'),
+(25, 96, 4, 'Được', 1, 127, '2024-08-12 06:37:35', '2024-08-12 07:19:27');
 
 -- --------------------------------------------------------
 
@@ -415,8 +422,8 @@ INSERT INTO `sanphams` (`id`, `name`, `slug`, `img`, `size`, `gia`, `giaKM`, `km
 (9, 'Đồng hồ Omega De Ville 433.33.41.21.03.00', '', '1723117832.jpg', 41, 16000000, 14000000, '2024-06-11 00:00:00', '2024-07-31 00:00:00', 4, 'Dây da', 'Tròn', 'Kính saphire', 'Xanh dương', 'Xanh dương', 'Trắng', 'Pin', 'Với trình độ tay nghề phức tạp bên ngoài và cơ chế mang tính cách mạng bên trong, OMEGA Hour Vision là chiếc đồng hồ được cân bằng tinh tế về mọi mặt.\r\nĐược trình bày trên dây đeo bằng da màu xanh lam, vỏ được làm từ thép không gỉ, với mặt số màu xanh lam hai vùng độc đáo mang lại ấn tượng tinh tế ngay lập tức.\r\nCác kim mảnh và cọc số La Mã được chế tác từ vàng trắng 18K, trong khi ngày và tháng có thể được kiểm tra bằng cửa sổ lịch ngày ở vị trí 3 giờ.\r\nỞ bên trong, chiếc đồng hồ đẹp mang phong cách cổ điển này được vận hành bởi Co-Axial Master Chronometer Calibre 8902 của OMEGA, một bộ chuyển động hiện đại có thể chống lại từ trường lên tới 15.000 gauss.', 1, '2024-06-09 06:30:58', '2024-08-09 03:09:28', 1, 2),
 (10, 'Đồng hồ  Yellow Gold Gilt Dial Square Case Wristwatch Ref 9347', '', '1723117808.jpg', 41, 4000000, 3500000, '2024-06-11 00:00:00', '2024-08-02 00:00:00', 5, 'Dây thép', 'Vuông', 'Kính saphire', 'Vàng', 'Nâu', 'Vàng', 'Automatic', 'Một ví dụ đặc biệt hiếm gặp sẽ phù hợp với người sưu tập đồ hiếm cổ điển, được chú ý bởi nhiều chi tiết đặc biệt. Rolex sản xuất rất ít đồng hồ vỏ vuông thuộc bất kỳ loại nào. Chiếc đồng hồ này có viền có kết cấu khác thường với các góc được đánh bóng, mặt số mạ vàng màu đen với nhiều loại điểm đánh dấu độc đáo và dây đeo hoàn toàn nguyên bản của nhà máy Rolex với logo \"Rolex\" lớn được đánh dấu bên trong móc cài. Đồng hồ có kích thước 26 x 26mm nhưng lại có kích thước lớn hơn so với các phiên bản vỏ tròn. Tình trạng cổ điển tuyệt vời.', 1, '2024-06-12 08:54:29', '2024-08-08 04:50:08', 1, 1),
 (11, 'Đồng Hồ Nữ Omega Seamaster AquaTerra Master Co-Axial 34mm – 23158342055003', '', '1723119559.jpg', 34, 4000000, 3500000, '2024-06-13 00:00:00', '2024-09-25 00:00:00', 5, 'Dây da', 'Tròn', 'Kính saphire', 'Trắng', 'Trắng', 'Vàng', 'Automatic', 'Omega Seamaster Aqua Terra 150M Master Co-Axial Chronometer 34mm 231.58.34.20.55.003 – 23158342055003\r\nMẫu đồng hồ sang trọng này có mặt số làm bằng ngọc trai với 12 viên kim cương. Cùng với bộ niềng kim cương tự nhiên quý giá kết hợp với thân vàng khối 18K.', 1, '2024-06-14 05:40:29', '2024-08-11 21:47:42', 2, 2),
-(12, 'Đồng hồ nam CASIO W-218H-4B', '', 'CASIO W-218H-4B.jpg', 43, 800000, NULL, NULL, NULL, 20, 'Dây cao su', 'Vuông', 'Kính acrylic', 'Đỏ', 'Xám', 'Đen', 'Pin', 'Thương hiệu đồng hồ Casio Nhật Bản đã thành công chế tác ra chiếc đồng hồ CASIO W-218H-4B – chiếc đồng hồ điện tử huyền thoại nổi tiếng với thiết kế cổ điển, phong cách thời trang với nhiều tính năng tiện ích. Huyền thoại của dòng thể thao điện tử gọi tên Casio W-218H-4B. Mặt đồng hồ thiết kế vuông vắn, tối giản, thông tin hiển thị tiện dụng mà giá thành lại rất “mềm”, đây xứng đáng là chiếc đồng hồ phong cách thể thao rất đáng để bạn đầu tư.', 1, '2024-06-14 05:51:20', '2024-08-08 03:24:12', 1, 5),
-(28, 'Đồng hồ Citizen EM0493-85P', '', '1720935643.jpg', 28, 6000000, NULL, NULL, NULL, 6, 'Dây thép lưới', 'Vuông', 'Kính saphire', 'Vàng', 'Trắng', 'Vàng', 'Eco', 'Mẫu Citizen Eco-Drive EM0493-85P sang trọng với thiết kế đính 2 viên pha lê tại vị trí 12 giờ trên nền mặt số vuông được phối tone màu trắng ngà.', 1, '2024-07-13 22:40:43', '2024-08-11 21:22:55', 2, 8),
+(12, 'Đồng hồ nam CASIO W-218H-4B', '', 'CASIO W-218H-4B.jpg', 43, 800000, NULL, NULL, NULL, 19, 'Dây cao su', 'Vuông', 'Kính acrylic', 'Đỏ', 'Xám', 'Đen', 'Pin', 'Thương hiệu đồng hồ Casio Nhật Bản đã thành công chế tác ra chiếc đồng hồ CASIO W-218H-4B – chiếc đồng hồ điện tử huyền thoại nổi tiếng với thiết kế cổ điển, phong cách thời trang với nhiều tính năng tiện ích. Huyền thoại của dòng thể thao điện tử gọi tên Casio W-218H-4B. Mặt đồng hồ thiết kế vuông vắn, tối giản, thông tin hiển thị tiện dụng mà giá thành lại rất “mềm”, đây xứng đáng là chiếc đồng hồ phong cách thể thao rất đáng để bạn đầu tư.', 1, '2024-06-14 05:51:20', '2024-08-12 06:36:56', 1, 5),
+(28, 'Đồng hồ Citizen EM0493-85P', '', '1720935643.jpg', 28, 6000000, NULL, NULL, NULL, 5, 'Dây thép lưới', 'Vuông', 'Kính saphire', 'Vàng', 'Trắng', 'Vàng', 'Eco', 'Mẫu Citizen Eco-Drive EM0493-85P sang trọng với thiết kế đính 2 viên pha lê tại vị trí 12 giờ trên nền mặt số vuông được phối tone màu trắng ngà.', 1, '2024-07-13 22:40:43', '2024-08-12 05:57:20', 2, 8),
 (29, 'Đồng hồ Citizen EM0899-81X', '', '1720945171.jpg', 30, 8200000, 6800000, '2024-07-01 15:18:00', '2024-11-30 15:18:00', 7, 'Dây thép lưới', 'Tròn', 'Kính saphire', 'Bạc', 'Hồng', 'Bạc', 'Eco', 'Citizen nữ 30mm Eco-Drive EM0899-81X kiểu dáng thanh lịch ấn tượng bởi 3 kim Leaf uyển chuyển trên nền mặt số hồng nhạt, dây đeo thép lưới Milanese hiện đại sang trọng dành cho quý cô.', 1, '2024-07-14 01:19:31', '2024-08-09 03:10:02', 2, 8),
 (30, 'Đồng hồ nam Citizen C7 NH8390-71L', '', '1720945390.jpg', 40, 8000000, NULL, NULL, NULL, 14, 'Dây thép', 'Tròn', 'Kính saphire', 'Bạc', 'Xanh dương', 'Bạc', 'Automatic', 'Citizen C7 NH8390-71L phiên bản nền mặt số xanh size 40mm với họa tiết trải tia nhẹ phong cách trẻ trung với thiết kế đơn giản 3 kim.', 1, '2024-07-14 01:23:10', '2024-07-14 01:23:10', 1, 8),
 (31, 'Đồng hồ nữ Casio B640WC-5ADF', '', '1720946066.jpg', 38, 2000000, NULL, NULL, NULL, 13, 'Dây thép', 'Tonneau', 'Kính acrylic', 'Hồng', 'Hồng', 'Hồng', 'Pin', 'Casio B640WC-5ADF là phiên bản dùng được cho cả nam lẫn nữ nhờ đặc trưng riêng dòng đồng hồ điện tử. Với ưu điểm máy quartz, nhiều tiện ích, phối màu vàng hồng trẻ trung đúng xu hướng đã giúp thiết kế chinh phục hàng triệu bạn trẻ đam mê thời trang – phong cách.', 1, '2024-07-14 01:34:26', '2024-07-28 19:30:41', 2, 5),
@@ -490,12 +497,12 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `av
 (3, 'Le Van C', 'levanc@example.com', '2024-06-01 14:12:10', '$2y$10$8Ex.FpV/o9GI/zy/N1WEsugPgFRXGA/6DE2KlExoP/AZKr0yjpYZa', '1723117313.jpg', '0456123789', 0, '789 XYZ Street, ABC City', 0, 1, NULL, NULL, NULL, NULL, NULL, '2024-06-01 14:12:10', '2024-08-08 04:41:53'),
 (4, 'Pham Thi D', 'phamthid@example.com', '2024-06-01 14:12:10', '$2y$10$8Ex.FpV/o9GI/zy/N1WEsugPgFRXGA/6DE2KlExoP/AZKr0yjpYZa', '1723117246.jpg', '0321654987', 1, '987 ABC Street, XYZ City', 0, 1, NULL, NULL, NULL, NULL, NULL, '2024-06-01 14:12:10', '2024-08-08 04:40:46'),
 (5, 'Hoang Van E', 'hoangvane@example.com', '2024-06-01 14:12:10', '$2y$10$8Ex.FpV/o9GI/zy/N1WEsugPgFRXGA/6DE2KlExoP/AZKr0yjpYZa', '1723117326.jpg', '0789123456', 0, '0456 ABC Street, XYZ City', 0, 1, NULL, NULL, NULL, NULL, NULL, '2024-06-01 14:12:10', '2024-08-08 04:42:06'),
-(7, 'admin', 'admin@example.com', '2024-06-02 14:04:57', '$2y$10$ubYcx1U8.YTsXxd4dDwbIeDVk/fZ9eLKxGZl95Ru0WmsrkGh5WHhu', '1723117271.jpg', '0123456789', 0, '123 ABC Street, XYZ City', 1, 1, NULL, NULL, NULL, NULL, NULL, '2024-06-02 14:04:57', '2024-08-08 04:41:11'),
+(7, 'admin', 'admin@example.com', '2024-06-02 14:04:57', '$2y$10$w3AY1c4SaR0Oq88u1.1XzeDiHMb3NcxyValLyqVKaFrequMnOvn.e', '1723117271.jpg', '0123456789', 0, '123 ABC Street, XYZ City', 1, 1, NULL, NULL, NULL, NULL, NULL, '2024-06-02 14:04:57', '2024-08-12 08:38:16'),
 (16, 'Nguyễn Thị Hoa', 'nguyenthihoa@gmail.com', '2024-06-04 08:24:41', '$2y$10$8Ex.FpV/o9GI/zy/N1WEsugPgFRXGA/6DE2KlExoP/AZKr0yjpYZa', '1723117143.jpg', '0977556644', 1, '456 Cao Lỗ, Phường 4, Quận 8, tp.HCM', 0, 1, NULL, NULL, NULL, NULL, NULL, '2024-06-04 08:24:41', '2024-08-10 00:27:44'),
 (18, 'Phan Thị Ngọc Bích', 'ngocbich@gmail.com', '2024-06-04 08:26:53', '$2y$10$8Ex.FpV/o9GI/zy/N1WEsugPgFRXGA/6DE2KlExoP/AZKr0yjpYZa', '1723117133.jpg', '0476634535', 1, '111 Nguyễn Chí Thanh, phường 5, Quận 10, tp.HCM', 0, 0, NULL, NULL, NULL, NULL, NULL, '2024-06-04 08:26:53', '2024-08-11 08:03:25'),
 (19, 'Lê Chí Tài', 'chitai@gmail.com', '2024-06-04 08:31:42', '$2y$10$8Ex.FpV/o9GI/zy/N1WEsugPgFRXGA/6DE2KlExoP/AZKr0yjpYZa', '', '0987877665', 0, '22 CMT8, phường 10, quận 3, tp.HCM', 0, 1, NULL, NULL, NULL, NULL, NULL, '2024-06-04 08:31:42', '2024-08-08 04:38:41'),
 (64, 'Phan Hùng', 'hungphan@gmail.com', '2024-07-06 10:43:18', '$2y$10$8Ex.FpV/o9GI/zy/N1WEsugPgFRXGA/6DE2KlExoP/AZKr0yjpYZa', '1721312117.jpg', '0939384675', 0, '123 Hoàng Sơn, Đống Đa, Hà Nội', 0, 1, NULL, NULL, NULL, NULL, NULL, '2024-07-06 10:43:18', '2024-08-11 04:35:55'),
-(96, 'Hoàng Thị Hậu', 'hoanghau46@gmail.com', '2024-08-04 02:01:33', '$2y$10$8Ex.FpV/o9GI/zy/N1WEsugPgFRXGA/6DE2KlExoP/AZKr0yjpYZa', NULL, '0309300046', 1, '1 Lý Thái Tổ, Phường 1, Quận 10, TP.HCM', 0, 1, NULL, NULL, NULL, NULL, NULL, '2024-08-04 02:01:33', '2024-08-05 02:25:10');
+(96, 'Hoàng Thị Hậu', 'hoanghau46@gmail.com', '2024-08-04 02:01:33', '$2y$10$8Ex.FpV/o9GI/zy/N1WEsugPgFRXGA/6DE2KlExoP/AZKr0yjpYZa', NULL, '0309300046', 1, '1 Lý Thái Tổ, Phường 1, Quận 10, TP.HCM', 0, 1, NULL, NULL, NULL, NULL, NULL, '2024-08-04 02:01:33', '2024-08-12 06:27:45');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -593,7 +600,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT cho bảng `chitiet_donhangs`
 --
 ALTER TABLE `chitiet_donhangs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
 
 --
 -- AUTO_INCREMENT cho bảng `danhmucs`
@@ -605,7 +612,7 @@ ALTER TABLE `danhmucs`
 -- AUTO_INCREMENT cho bảng `donhangs`
 --
 ALTER TABLE `donhangs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
 
 --
 -- AUTO_INCREMENT cho bảng `failed_jobs`
@@ -635,7 +642,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT cho bảng `ratings`
 --
 ALTER TABLE `ratings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT cho bảng `sanphams`
