@@ -59,7 +59,11 @@ Bước 1: chạy lệnh "php artinsan serv"
 
 Bước 2: mở trình duyệt và vào địa chỉ   http://localhost:8000/
  đây là trang chủ website cho khác hàng truy cập
-
+Một số tài khoảng test user:
+ 	tài khoản : 		Mật khẩu:
+	hungphan@gmail.com	123456
+	hoanghau46@gmail.com	123456
+	chitai@gmail.com	123456
 Bước 3: nhấn vào Adminpage góc phải trên cùng của website để vào trang admin quản lý hoặc
 vào đường dẫn  http://localhost:8000/admin/
 tài khoản: admin@example.com
